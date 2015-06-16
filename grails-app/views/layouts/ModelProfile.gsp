@@ -98,6 +98,7 @@
                         <span>Nivel 2</span>
                     </a>
                 </li>
+                <!--
                 <li class="sub-menu">
                     <a href="${request.contextPath}/nivel3/index" >
                         <i class="fa fa-desktop"></i>
@@ -116,34 +117,25 @@
                         <span>Foro</span>
                     </a>
                 </li>
+                -->
 
-                <li class="sub-menu">
-                    <a href="javascript:;" >
-                        <i class=" fa fa-bar-chart-o"></i>
-                        <span>Soporte</span>
-                    </a>
-                    <ul class="sub">
-                        <!--<li> <a href="${request.contextPath}/admin/index">Administrador</a></li>
-                        <li> <a href="${request.contextPath}/regular/index">Regular</a></li>
-                        <li> <a href="${request.contextPath}/forum/index">Foro</a></li>
-                        <li> <a href="${request.contextPath}/post/index">Post</a></li>
-                        <li> <a href="${request.contextPath}/file/index">File</a></li>
 
-                        <li><a  href="buttons.html">Buttons</a></li>
-                        <li><a  href="panels.html">Panels</a></li>
-                        <li><a  href="morris.html">Morris</a></li>
-                        <li><a  href="chartjs.html">Chartjs</a></li>
-                        <li><a  href="calendar.html">Calendar</a></li>
-                        <li><a  href="gallery.html">Gallery</a></li>
-                        <li><a  href="todo_list.html">Todo List</a></li>
-                        <li><a  href="blank.html">Blank Page</a></li>
-                        <li><a  href="login.html">Login</a></li>
-                        <li><a  href="lock_screen.html">Lock Screen</a></li>
-                        <li><a  href="form_component.html">Form Components</a></li>
-                        <li><a  href="basic_table.html">Basic Table</a></li>
-                        <li><a  href="responsive_table.html">Responsive Table</a></li>-->
-                    </ul>
-                </li>
+                        <!-- CALENDAR-->
+                        <div id="calendar" class="mb">
+                            <div class="panel green-panel no-margin">
+                                <div class="panel-body">
+                                    <div id="date-popover" class="popover top" style="cursor: pointer; disadding: block; margin-left: 33%; margin-top: -50px; width: 175px;">
+                                        <div class="arrow"></div>
+                                        <h3 class="popover-title" style="disadding: none;"></h3>
+                                        <div id="date-popover-content" class="popover-content"></div>
+                                    </div>
+                                    <div id="my-calendar"></div>
+                                </div>
+                            </div>
+                        </div><!-- / calendar -->
+
+
+
             </ul>
 
         </div>
@@ -175,6 +167,8 @@
 </section>
 <!-- FIN DE PIE DE PAGINA-->
 <!-- js placed at the end of the document so the pages load faster -->
+
+
 <script src="${request.contextPath}/perfil/js/jquery.js"></script>
 <script src="${request.contextPath}/perfil/js/jquery-1.8.3.min.js"></script>
 <script src="${request.contextPath}/perfil/js/bootstrap.min.js"></script>
@@ -213,6 +207,42 @@
         return false;
     });
 </script>
+
+<script type="application/javascript">
+    $(document).ready(function () {
+        $("#date-popover").popover({html: true, trigger: "manual"});
+        $("#date-popover").hide();
+        $("#date-popover").click(function (e) {
+            $(this).hide();
+        });
+
+        $("#my-calendar").zabuto_calendar({
+            action: function () {
+                return myDateFunction(this.id, false);
+            },
+            action_nav: function () {
+                return myNavFunction(this.id);
+            },
+            ajax: {
+                url: "show_data.php?action=1",
+                modal: true
+            },
+            legend: [
+                {type: "text", label: "Special event", badge: "00"},
+                {type: "block", label: "Regular event", }
+            ]
+        });
+    });
+
+
+    function myNavFunction(id) {
+        $("#date-popover").hide();
+        var nav = $("#" + id).data("navigation");
+        var to = $("#" + id).data("to");
+        console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+    }
+</script>
+
 
 </body>
 </html>

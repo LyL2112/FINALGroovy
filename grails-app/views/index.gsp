@@ -393,7 +393,7 @@
 
 					<div class="panel-body text-center">
 						<h4 class="panel-header"><a href="https://twitter.com/trossky2112">@Luis F. Garcia</a></h4>
-						<small>Ing.Sistemas y Computación</small>
+						<small>Ing.Sistemas y Computación</small>Luis
 					</div>
 
 					<div class="panel-thumbnails">
@@ -428,7 +428,7 @@
 						<img class="img-responsive img-circle" src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-xaf1/v/t1.0-9/10926365_10152624943974033_7657385906754454472_n.jpg?oh=03e0fae53f58651cc1c961fb91ee47ff&oe=55986FD1&__gda__=1436468581_2c601e42b0f2330d2751dd4e882d8651" />
 					</div>
 					<div class="panel-body text-center">
-						<h4 class="panel-header"><a href="https://twitter.com/w3eden">@Luis F. Bello</a></h4>
+						<h4 class="panel-header"><a href="#">@Luis F. Bello</a></h4>
 						<small>Ing.Sistemas y Computación.</small>
 					</div>
 					<div class="panel-thumbnails">
@@ -464,7 +464,7 @@
 						<img class="img-responsive img-circle" src="https://scontent-mia.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/11060328_1075626552452539_5784045592963949834_n.jpg?oh=5b76174723d4ffea870468812ff4a96c&oe=55A693E3" />
 					</div>
 					<div class="panel-body text-center">
-						<h4 class="panel-header"><a href="https://twitter.com/w3eden">@Victor Maldonado</a></h4>
+						<h4 class="panel-header"><a href="#">@Victor Maldonado</a></h4>
 						<small>Ing.Sistemas y Computación.</small>
 					</div>
 					<div class="panel-thumbnails">
